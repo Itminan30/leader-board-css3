@@ -23,6 +23,8 @@ main{
     background-color: white;
     width: 870px;
     padding: 30px;
+    margin-top: 21px;
+    border-radius: 7px;
 }
 
 hr {
@@ -90,11 +92,13 @@ hr {
 
 .blog-title {
     font-size: 20px;
+    margin-bottom: 0;
 }
 
 .blog-author {
     color: #9F9F9F;
     font-size: 16px;
+    margin-top: 8px;
 }
 
 .blog-author a {
@@ -102,4 +106,123 @@ hr {
     font-size: 16px;
     color: #562EFF;
 
+}
+
+/*--------------------------------------------------------
+                    courses styles
+----------------------------------------------------------*/
+
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 24px;
+}
+
+.course {
+    width: 253px;
+    box-shadow: 10px 5px 20px lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.courses .course img {
+    width: 224px;
+    height: 104px;
+    padding-top: 10px;
+}
+
+.course-title {
+    text-align: center;
+}
+
+.course-author {
+    color: #ED6B4F;
+    padding-left: 10px;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.fa-star {
+    font-size: 12px;
+}
+
+.fa-star.filled {
+    color: #FFC014;
+}
+
+.fa-star.empty {
+    color: #aeaeaec7;
+}
+
+.course-duration {
+    background-color: #FFE4E8;
+    border-radius: 15px;
+    padding: 5px;
+    color: #FF4A60;
+}
+
+.course-duration .fa-clock {
+    color: #FF4A60;
+}
+
+/*--------------------------------------------------------
+                        media queries
+----------------------------------------------------------*/
+
+/*--------------------
+    mobile devices
+----------------------*/
+
+@media only screen and (max-width:688px){
+    .container {
+        width: 100%;
+    }
+
+    .section-title{
+        text-align: center;
+    }
+
+    .players, .blogs, .courses{
+        grid-template-columns: 1fr;
+    }
+
+    .player, .blog{
+        flex-direction: column;
+    }
+
+
+    .blog-title {
+        font-size: 16px;
+    }
+
+    .blog-author {
+        font-size: 14px;
+    }
+
+    .courses {
+        justify-items: center;
+    }
+
+}
+
+/*---------------------
+    tablet devices
+-----------------------*/
+
+@media only screen and (min-width: 689px) and (max-width:990px) {
+    .container{
+        width: 100%;
+    }
+
+    .players, .courses {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+    }
 }
